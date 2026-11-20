@@ -1,14 +1,14 @@
 # Climate Monitor
 
-[![CI Testing](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/ci-testing.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/ci-testing.yml)
-[![Code Quality](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/code-quality.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/code-quality.yml)
-[![Translation Validator](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/translation-validator.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/translation-validator.yml)
-[![Release](https://img.shields.io/github/v/release/CervezaStallone/ClimateMonitor)](https://github.com/CervezaStallone/ClimateMonitor/releases/latest)
-[![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Dash](https://img.shields.io/badge/Dash-4.4-008de4?logo=plotly&logoColor=white)](https://dash.plotly.com/)
-[![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20Raspberry%20Pi-lightgrey)](#run-as-a-service-start-at-boot-also-without-login)
-[![License: MIT](https://img.shields.io/github/license/CervezaStallone/ClimateMonitor)](LICENSE)
-[![Last commit](https://img.shields.io/github/last-commit/CervezaStallone/ClimateMonitor)](https://github.com/CervezaStallone/ClimateMonitor/commits/main)
+[!\[CI Testing](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/ci-testing.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/ci-testing.yml)
+[!\[Code Quality](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/code-quality.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/code-quality.yml)
+[!\[Translation Validator](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/translation-validator.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/translation-validator.yml)
+[!\[Release](https://img.shields.io/github/v/release/CervezaStallone/ClimateMonitor)](https://github.com/CervezaStallone/ClimateMonitor/releases/latest)
+[!\[Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue?logo=python\&logoColor=white)](https://www.python.org/)
+[!\[Dash](https://img.shields.io/badge/Dash-4.4-008de4?logo=plotly\&logoColor=white)](https://dash.plotly.com/)
+[!\[Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20Raspberry%20Pi-lightgrey)](#run-as-a-service-start-at-boot-also-without-login)
+[!\[License: MIT](https://img.shields.io/github/license/CervezaStallone/ClimateMonitor)](LICENSE)
+[!\[Last commit](https://img.shields.io/github/last-commit/CervezaStallone/ClimateMonitor)](https://github.com/CervezaStallone/ClimateMonitor/commits/main)
 
 A real-time climate monitoring dashboard for Modbus RTU temperature and humidity sensors (XY-MD02, XY-MD04 and similar) that reads, visualizes and analyzes their data.
 
@@ -18,135 +18,144 @@ A real-time climate monitoring dashboard for Modbus RTU temperature and humidity
   <a href="https://brdc.nl/de/climatemonitor/">Deutsch</a>
 </p>
 
-<a href="https://buymeacoffee.com/cervezastallone" target="_blank" title="buymeacoffee">
-  <img src="https://iili.io/JoQ1MeS.md.png"  alt="buymeacoffee-yellow-badge" style="width: 208px;">
-</a>
-
 ### Table of Contents
 
-- [Features](#features)
-- [Screenshots](#screenshots)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Run as a service](#run-as-a-service-start-at-boot-also-without-login)
-  - [Linux / Raspberry Pi (systemd)](#linux--raspberry-pi-systemd)
-  - [Windows](#windows)
-- [Updating to a new version](#updating-to-a-new-version)
-- [Project Structure](#project-structure)
-- [Using the dashboard](#using-the-dashboard)
-- [Configuration](#configuration)
-  - [Settings Tab](#settings-tab)
-  - [Multiple buses and sensors](#multiple-buses-and-sensors)
-  - [Notifications](#notifications)
-  - [MQTT](#mqtt)
-  - [Reports](#reports)
-- [Adding a New Language](#adding-a-new-language)
-- [Comfort Score & Humidex](#comfort-score--humidex)
-- [Mollier Diagram (Psychrometric Chart)](#mollier-diagram-psychrometric-chart)
-- [Wood Moisture (Equilibrium Moisture Content)](#wood-moisture-equilibrium-moisture-content)
-- [Historical Data Replay](#historical-data-replay)
-- [Database Architecture](#database-architecture)
-- [Testing](#testing)
-- [Development](#development)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
-- [Changelog](CHANGELOG.md)
+* [Features](#features)
+* [Screenshots](#screenshots)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Run as a service](#run-as-a-service-start-at-boot-also-without-login)
+
+  * [Linux / Raspberry Pi (systemd)](#linux--raspberry-pi-systemd)
+  * [Windows](#windows)
+* [Updating to a new version](#updating-to-a-new-version)
+* [Project Structure](#project-structure)
+* [Using the dashboard](#using-the-dashboard)
+* [Configuration](#configuration)
+
+  * [Settings Tab](#settings-tab)
+  * [Multiple buses and sensors](#multiple-buses-and-sensors)
+  * [Notifications](#notifications)
+  * [MQTT](#mqtt)
+  * [Reports](#reports)
+* [Adding a New Language](#adding-a-new-language)
+* [Comfort Score \& Humidex](#comfort-score--humidex)
+* [Mollier Diagram (Psychrometric Chart)](#mollier-diagram-psychrometric-chart)
+* [Wood Moisture (Equilibrium Moisture Content)](#wood-moisture-equilibrium-moisture-content)
+* [Historical Data Replay](#historical-data-replay)
+* [Database Architecture](#database-architecture)
+* [Testing](#testing)
+* [Development](#development)
+* [Troubleshooting](#troubleshooting)
+* [License](#license)
+* [Changelog](CHANGELOG.md)
 
 ### Features
 
-- **Real-time monitoring**: Live charts with automatic updates (1 second interval)
-- **Historical data**: Persistent storage in SQLite database with time filters (1 min to 6 months)
-- **Database optimizations**: Table-per-day partitioning, WAL mode, batch inserts for multi-year operation
-- **Data retention**: Configurable automatic cleanup of old data
-- **Multiple measurements**:
-  - Temperature (°C)
-  - Humidity (%)
-  - Dew Point (Magnus formula)
-  - Absolute Humidity (g/m³)
-  - Humidex (scientific comfort index)
-  - Comfort Score (0-6, based on Humidex)
-- **Psychrometric chart**: Mollier diagram with live indicator and comfort zone visualization
-- **Wood moisture** (optional): equilibrium moisture content per sensor, a diagram with zones from your limits, warning and alarm levels
-- **Zones**: your own coloured areas of temperature × humidity in the wood diagram, shaped by dragging corners, with a notification when a sensor leaves a desired zone or enters a danger zone
-- **Limits in the chart**: the limits of the shown quantity appear as dashed lines in the time chart
-- **Historical data replay**: Time-travel through data with preset buttons or custom date/time selection
-- **Interactive slider**: Live updates while dragging for smooth historical navigation
-- **Scientific analysis**: Humidex formula according to Environment Canada standard
-- **Multilingual**: 5 languages fully supported (Dutch, English, German, French, Spanish)
-- **Two dashboard views**: *Board* (every sensor as one row, all sensors at a glance) or *Meters* (one panel per sensor)
-- **Dark and light theme**: toggle in the top bar, remembered per browser (default in Settings); layout adapts to phones and tablets
-- **Alarm window**: click the sensor summary in the top bar to see all active alarms and warnings and mute them for 15 minutes to 24 hours
-- **Clear status per sensor**: OK, warning, alarm or offline, with the value that is out of limits highlighted
-- **Zoom persistence**: Graph zoom stays preserved during live updates
-- **Robust**: Extensive input validation and error handling
-- **Multiple sensors and RS-485 buses**: several USB/RS-485 interfaces, each with several Modbus slaves; combined and per-sensor graphs
-- **Flexible sensors**: register data type (int16, uint16, int32, uint32, float32), byte order (ABCD, DCBA, BADC, CDAB) and a calibration correction per sensor; *Scan* finds which slave addresses answer on a bus
-- **Configurable in the browser**: Settings tab for buses, sensors, timezone, language, data retention, server and security
-- **Notifications**: Telegram and/or e-mail when limits are exceeded (global or per sensor, at warning or alarm level) or a zone is left or entered, when values are back to normal and when a sensor goes offline
-- **MQTT**: publish the values of every sensor to an MQTT broker (Home Assistant, Node-RED, SCADA), with optional Home Assistant discovery
-- **Reports**: weekly or monthly PDF with the wood moisture per sensor and a min/max table, e-mailed and downloadable
-- **Login protection**: Admin password for the Settings tab, optionally for the whole app
+* **Real-time monitoring**: Live charts with automatic updates (1 second interval)
+* **Historical data**: Persistent storage in SQLite database with time filters (1 min to 6 months)
+* **Database optimizations**: Table-per-day partitioning, WAL mode, batch inserts for multi-year operation
+* **Data retention**: Configurable automatic cleanup of old data
+* **Multiple measurements**:
+
+  * Temperature (°C)
+  * Humidity (%)
+  * Dew Point (Magnus formula)
+  * Absolute Humidity (g/m³)
+  * Humidex (scientific comfort index)
+  * Comfort Score (0-6, based on Humidex)
+* **Psychrometric chart**: Mollier diagram with live indicator and comfort zone visualization
+* **Wood moisture** (optional): equilibrium moisture content per sensor, a diagram with zones from your limits, warning and alarm levels
+* **Zones**: your own coloured areas of temperature × humidity in the wood diagram, shaped by dragging corners, with a notification when a sensor leaves a desired zone or enters a danger zone
+* **Limits in the chart**: the limits of the shown quantity appear as dashed lines in the time chart
+* **Historical data replay**: Time-travel through data with preset buttons or custom date/time selection
+* **Interactive slider**: Live updates while dragging for smooth historical navigation
+* **Scientific analysis**: Humidex formula according to Environment Canada standard
+* **Multilingual**: 5 languages fully supported (Dutch, English, German, French, Spanish)
+* **Two dashboard views**: *Board* (every sensor as one row, all sensors at a glance) or *Meters* (one panel per sensor)
+* **Dark and light theme**: toggle in the top bar, remembered per browser (default in Settings); layout adapts to phones and tablets
+* **Alarm window**: click the sensor summary in the top bar to see all active alarms and warnings and mute them for 15 minutes to 24 hours
+* **Clear status per sensor**: OK, warning, alarm or offline, with the value that is out of limits highlighted
+* **Zoom persistence**: Graph zoom stays preserved during live updates
+* **Robust**: Extensive input validation and error handling
+* **Multiple sensors and RS-485 buses**: several USB/RS-485 interfaces, each with several Modbus slaves; combined and per-sensor graphs
+* **Flexible sensors**: register data type (int16, uint16, int32, uint32, float32), byte order (ABCD, DCBA, BADC, CDAB) and a calibration correction per sensor; *Scan* finds which slave addresses answer on a bus
+* **Configurable in the browser**: Settings tab for buses, sensors, timezone, language, data retention, server and security
+* **Notifications**: Telegram and/or e-mail when limits are exceeded (global or per sensor, at warning or alarm level) or a zone is left or entered, when values are back to normal and when a sensor goes offline
+* **MQTT**: publish the values of every sensor to an MQTT broker (Home Assistant, Node-RED, SCADA), with optional Home Assistant discovery
+* **Reports**: weekly or monthly PDF with the wood moisture per sensor and a min/max table, e-mailed and downloadable
+* **Login protection**: Admin password for the Settings tab, optionally for the whole app
 
 ### Screenshots
 
 #### Dashboard: Board view (dark theme)
-![Board view](img/dashboard-board-dark.png)
+
+!\[Board view](img/dashboard-board-dark.png)
 *All sensors at a glance: current values, 24-hour trend and status per sensor. Below: one chart with a tab per quantity.*
 
 #### Dashboard: Meters view (light theme)
-![Meters view](img/dashboard-meters-light.png)
+
+!\[Meters view](img/dashboard-meters-light.png)
 *One panel per sensor. View and theme are chosen in Settings; the switch at the top changes the view temporarily.*
 
 #### On a phone
+
 <p>
   <img src="img/dashboard-mobile-dark.png" alt="Phone, dark theme" width="300">
   <img src="img/dashboard-mobile-light.png" alt="Phone, light theme" width="300">
 </p>
 
 #### Mollier diagram
-![Mollier diagram](img/mollier.png)
+
+!\[Mollier diagram](img/mollier.png)
 *Current state of every sensor in its own colour, with saturation line, RH curves and comfort zone.*
 
 #### Wood moisture
-![Wood moisture diagram](img/wood-diagram.png)
+
+!\[Wood moisture diagram](img/wood-diagram.png)
 *Equilibrium wood moisture: lines of equal wood moisture, the 18 % warning and 20 % alarm limits and your zones (here a desired comfort zone and a mould-risk danger zone).*
 
-![Zone editor](img/zone-editor.png)
+!\[Zone editor](img/zone-editor.png)
 *Zone editor: drag the corners, drag a dot in the middle of a side to add a corner.*
 
 #### Report
-![Moisture report](img/report.png)
+
+!\[Moisture report](img/report.png)
 *Monthly report (Spanish, example data): daily wood moisture per sensor and the min/max table with the wood moisture coloured by level.*
 
 #### Historical replay
-![Historical range](img/history-range.png)
-![Historical replay](img/mollier-history.png)
+
+!\[Historical range](img/history-range.png)
+!\[Historical replay](img/mollier-history.png)
 *Pick a period for one sensor and drag the timeline to replay its climate in the Mollier diagram.*
 
 #### Settings
-![Settings: display and Modbus](img/settings-modbus.png)
+
+!\[Settings: display and Modbus](img/settings-modbus.png)
 *Display, Modbus buses and sensors with live status.*
 
-![Settings: limits](img/settings-limits.png)
+!\[Settings: limits](img/settings-limits.png)
 *Alarm limits for all sensors or per sensor, alarm delay, hysteresis and the notification log.*
 
 *Screenshots use demonstration data.*
 
 ### Requirements
 
-- Python 3.8+
-- Modbus RTU device (RS485)
-- Windows, Linux or macOS
+* Python 3.8+
+* Modbus RTU device (RS485)
+* Windows, Linux or macOS
 
 ### Installation
 
 1. **Clone the repository**
+
 ```bash
 git clone https://github.com/CervezaStallone/ClimateMonitor.git
 cd ClimateMonitor
 ```
 
 2. **Create a virtual environment**
+
 ```bash
 python -m venv .venv
 ```
@@ -154,21 +163,25 @@ python -m venv .venv
 3. **Activate the virtual environment**
 
 Windows PowerShell:
+
 ```powershell
-.\.venv\Scripts\Activate.ps1
+.\\.venv\\Scripts\\Activate.ps1
 ```
 
 Windows CMD:
+
 ```cmd
-.venv\Scripts\activate.bat
+.venv\\Scripts\\activate.bat
 ```
 
 Linux/macOS:
+
 ```bash
 source .venv/bin/activate
 ```
 
 4. **Install dependencies**
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -176,35 +189,38 @@ pip install -r requirements.txt
 5. **Configure the application**
 
 Copy the example configuration file:
+
 ```bash
 cp .env.example .env
 ```
 
 Optionally adjust `.env`. The Modbus values are only used once, to create the first bus and sensor; after that everything is configured in the browser (see [Settings Tab](#settings-tab)):
+
 ```env
 # Modbus Settings
-MODBUS_PORT=COM11
-MODBUS_SLAVE_ID=1
-MODBUS_BAUDRATE=9600
-MODBUS_BYTESIZE=8
-MODBUS_PARITY=N
-MODBUS_STOPBITS=1
-MODBUS_TIMEOUT=1
-MODBUS_FUNCTION_CODE=4
-MODBUS_REGISTER_TEMP=1
-MODBUS_REGISTER_HUMIDITY=2
+MODBUS\_PORT=COM11
+MODBUS\_SLAVE\_ID=1
+MODBUS\_BAUDRATE=9600
+MODBUS\_BYTESIZE=8
+MODBUS\_PARITY=N
+MODBUS\_STOPBITS=1
+MODBUS\_TIMEOUT=1
+MODBUS\_FUNCTION\_CODE=4
+MODBUS\_REGISTER\_TEMP=1
+MODBUS\_REGISTER\_HUMIDITY=2
 
 # Database Settings
-DATABASE_FILE=src/modbus_sensor_data.db
-DATA_RETENTION_DAYS=0
+DATABASE\_FILE=src/modbus\_sensor\_data.db
+DATA\_RETENTION\_DAYS=0
 
 # Initial values only, change them later in the Settings tab
-DEBUG_LOGGING=False
+DEBUG\_LOGGING=False
 TIMEZONE=Europe/Amsterdam
-DEFAULT_LANGUAGE=EN
+DEFAULT\_LANGUAGE=EN
 ```
 
 6. **Start the application**
+
 ```bash
 python app.py
 ```
@@ -219,61 +235,66 @@ when the device boots — nobody has to log in — and is restarted if it stops.
 #### Linux / Raspberry Pi (systemd)
 
 In the app folder:
+
 ```bash
 sudo ./deploy/linux/install-service.sh
 ```
+
 The script creates the virtual environment, installs the dependencies, gives the user access to
 the serial ports (`dialout` group) and installs and starts the `xy-md02` service. The service runs
 as the user who ran `sudo` (use `--user <name>` for another user; `--dry-run` shows what would
 happen without changing anything). The app folder must be owned by that user or root and must not
 be writable by others.
 
-| Task | Command |
-|------|---------|
-| Status | `systemctl status xy-md02` |
-| Live log | `journalctl -u xy-md02 -f` |
-| Restart | `sudo systemctl restart xy-md02` |
-| Update | update the app files (e.g. `git pull`), then run the install script again |
-| Uninstall | `sudo ./deploy/linux/uninstall-service.sh` (data and settings are kept) |
+|Task|Command|
+|-|-|
+|Status|`systemctl status xy-md02`|
+|Live log|`journalctl -u xy-md02 -f`|
+|Restart|`sudo systemctl restart xy-md02`|
+|Update|update the app files (e.g. `git pull`), then run the install script again|
+|Uninstall|`sudo ./deploy/linux/uninstall-service.sh` (data and settings are kept)|
 
 #### Windows
 
 1. Install Python 3.10+ from [python.org](https://www.python.org/downloads/): choose *Customize installation*,
-   tick *Install Python for all users* and *Add Python to environment variables*.
-   Copy the app to a folder that only administrators can change, e.g. `C:\Program Files\ClimateMonitor`.
+tick *Install Python for all users* and *Add Python to environment variables*.
+Copy the app to a folder that only administrators can change, e.g. `C:\\Program Files\\ClimateMonitor`.
 2. Open PowerShell **as Administrator** in the app folder and run:
-   ```powershell
-   powershell -ExecutionPolicy Bypass -File .\deploy\windows\install-service.ps1
+
+```powershell
+   powershell -ExecutionPolicy Bypass -File .\\deploy\\windows\\install-service.ps1
    ```
+
    Changed the port in Settings? Add `-Port <number>` so the firewall rule matches.
 
 This registers the scheduled task **XY-MD02 WebApp** that starts at Windows startup under the
 limited built-in *LOCAL SERVICE* account (no login needed), restarts the app if it stops, and opens
 the web port in the firewall for domain and private networks (add `-AllowPublic` to also allow
-networks marked as public). Output is written to `logs\app.log`.
+networks marked as public). Output is written to `logs\\app.log`.
 
-Put the app in a folder that only administrators can change (e.g. `C:\Program Files\ClimateMonitor`);
+Put the app in a folder that only administrators can change (e.g. `C:\\Program Files\\ClimateMonitor`);
 the script refuses to install from a folder that normal users can modify.
 
-| Task | How |
-|------|-----|
-| Status | `Get-ScheduledTask -TaskName 'XY-MD02 WebApp'` or Task Scheduler |
-| Log | `logs\app.log` in the app folder |
-| Update | update the app files, then run `install-service.ps1` again |
-| Uninstall | `powershell -ExecutionPolicy Bypass -File .\deploy\windows\uninstall-service.ps1` (data is kept) |
+|Task|How|
+|-|-|
+|Status|`Get-ScheduledTask -TaskName 'XY-MD02 WebApp'` or Task Scheduler|
+|Log|`logs\\app.log` in the app folder|
+|Update|update the app files, then run `install-service.ps1` again|
+|Uninstall|`powershell -ExecutionPolicy Bypass -File .\\deploy\\windows\\uninstall-service.ps1` (data is kept)|
 
-> After installing, open `http://<device-ip>:8050`, go to **Settings** and set the admin password.
+> After installing, open `http://<device-ip>:8050`, go to \*\*Settings\*\* and set the admin password.
 
 ### Updating to a new version
 
 Measurements, sensors and settings are stored in the database file and are kept during an update. Settings from older versions (including `.env` values from before the Settings tab) are taken over automatically on the first start.
 
-1. **Back up the database.** Stop the app (`sudo systemctl stop xy-md02`, stop the service in `services.msc` on Windows, or `Ctrl+C`) and copy the database file (default `src/modbus_sensor_data.db`, see `DATABASE_FILE` in `.env`).
+1. **Back up the database.** Stop the app (`sudo systemctl stop xy-md02`, stop the service in `services.msc` on Windows, or `Ctrl+C`) and copy the database file (default `src/modbus\_sensor\_data.db`, see `DATABASE\_FILE` in `.env`).
 2. **Get the new version.** Run `git pull` in the app folder. If you installed from a ZIP, unpack the new ZIP over the existing folder and keep `.env` and `src/`.
 3. **Update the dependencies and start the app.**
-   - Linux service: `sudo ./deploy/linux/install-service.sh`
-   - Windows service (PowerShell as Administrator): `powershell -ExecutionPolicy Bypass -File .\deploy\windows\install-service.ps1` (add `-Port <number>` if you changed the port)
-   - Started by hand: activate the virtual environment, then `pip install -r requirements.txt` and `python app.py`
+
+   * Linux service: `sudo ./deploy/linux/install-service.sh`
+   * Windows service (PowerShell as Administrator): `powershell -ExecutionPolicy Bypass -File .\\deploy\\windows\\install-service.ps1` (add `-Port <number>` if you changed the port)
+   * Started by hand: activate the virtual environment, then `pip install -r requirements.txt` and `python app.py`
 4. **Reload the dashboard** with `Ctrl+F5`.
 
 Coming from a version without the Settings tab? Open **Settings** after the update and set an admin password.
@@ -286,21 +307,21 @@ What changed in each version: see [CHANGELOG.md](CHANGELOG.md).
 ClimateMonitor/
 ├── app.py                      # Main entry point
 ├── database.py                 # Database operations, partitioning, WAL mode
-├── modbus_reader.py            # Modbus RTU: one thread per bus, batched database writes
+├── modbus\_reader.py            # Modbus RTU: one thread per bus, batched database writes
 ├── devices.py                  # Buses and sensors configuration, live status
 ├── alerts.py                   # Limits, alarm state, Telegram/e-mail notifications
-├── mqtt_publisher.py           # MQTT publishing per sensor
+├── mqtt\_publisher.py           # MQTT publishing per sensor
 ├── psychrometric.py            # Mollier diagram generation
 ├── wood.py                     # Wood equilibrium moisture: formula, response time, diagram
 ├── zones.py                    # Zones (areas of temperature × humidity) with colour and alarm
 ├── report.py                   # Weekly/monthly PDF report, sent by e-mail
 ├── callbacks.py                # Dashboard callbacks (board/meters, chart, Mollier, replay)
 ├── settings.py                 # Settings stored in the database, validation, password reset
-├── settings_ui.py              # Settings tab
+├── settings\_ui.py              # Settings tab
 ├── auth.py                     # Admin password, login sessions, protection
 ├── layout.py                   # Page structure, dark/light theme, styling
 ├── translations.py             # Texts in NL, EN, DE, FR, ES
-├── test_app.py                 # Automated tests
+├── test\_app.py                 # Automated tests
 ├── deploy/                     # Service install scripts (Linux, Windows)
 ├── assets/                     # Logo (header and favicon) and the zone editor script, served by Dash
 ├── img/                        # README screenshots
@@ -310,19 +331,19 @@ ClimateMonitor/
 ├── .gitignore                  # Git exclude rules
 ├── README.md                   # This file
 └── src/                        # Data directory
-    └── modbus_sensor_data.db   # SQLite database (not in git)
+    └── modbus\_sensor\_data.db   # SQLite database (not in git)
 ```
 
 ### Using the dashboard
 
 **Status per sensor**
 
-| Status | Meaning |
-|--------|---------|
-| OK | Value received recently and all limits are met |
-| Warning | A warning-level limit or zone is exceeded, or an alarm limit is exceeded while the alarm delay is still running |
-| Alarm | An alarm limit or zone has been exceeded for longer than the alarm delay; notifications are sent |
-| Offline | No valid reading for 3 poll intervals (at least 30 seconds); the last reading time is shown |
+|Status|Meaning|
+|-|-|
+|OK|Value received recently and all limits are met|
+|Warning|A warning-level limit or zone is exceeded, or an alarm limit is exceeded while the alarm delay is still running|
+|Alarm|An alarm limit or zone has been exceeded for longer than the alarm delay; notifications are sent|
+|Offline|No valid reading for 3 poll intervals (at least 30 seconds); the last reading time is shown|
 
 The value that is out of limits is highlighted in its cell. The top bar shows how many sensors are
 in alarm, warning or offline; click it to open the **alarm window**. There you see every active alarm
@@ -332,10 +353,11 @@ A muted alarm stays visible but sends no notifications; mutes end when the app r
 **Theme**: *Dark* / *Light* in the top bar switches instantly and is remembered in this browser.
 
 **Views**
-- *Board*: one row per sensor with temperature, humidity, dew point, absolute humidity, comfort,
-  wood moisture (when enabled), a 24-hour temperature trend and the status. On a phone the less
-  important columns are hidden and the headers are shortened.
-- *Meters*: one panel per sensor with large values.
+
+* *Board*: one row per sensor with temperature, humidity, dew point, absolute humidity, comfort,
+wood moisture (when enabled), a 24-hour temperature trend and the status. On a phone the less
+important columns are hidden and the headers are shortened.
+* *Meters*: one panel per sensor with large values.
 
 Every sensor keeps the same colour everywhere (its marker, trend line, chart line and Mollier point).
 
@@ -358,33 +380,36 @@ change or delete a zone, click it in the diagram or pick it from *Edit zone…*.
 Open the **Settings** tab in the web app. The first visit asks you to create an admin password
 (at least 8 characters). After that you can change, without editing files or restarting:
 
-| Section | Settings |
-|---------|----------|
-| Display | Dashboard view (Board / Meters), theme (Dark / Light), show or hide comfort, the Mollier diagram and wood moisture |
-| Modbus buses and sensors | Poll interval, buses (RS-485 interfaces), sensors (Modbus slaves) with data type (int16, uint16, int32, uint32, float32), byte order (ABCD, DCBA, BADC, CDAB) and a temperature and humidity correction for calibration |
-| Notifications: channels | Telegram bot token and chat ID, SMTP server, sender and recipients, test buttons |
-| MQTT | Broker, port, TLS, login, client ID, topic prefix, publish interval, QoS, retain, Home Assistant discovery, test button |
-| Reports | Report by e-mail (off / weekly / monthly), report language, download |
-| Notifications: limits | Limits per quantity (all sensors or one sensor) at warning or alarm level, zones (desired or danger zone, colour, per sensor), alarm delay, hysteresis, recovery and offline alerts |
-| Wood moisture | Correction for the wood species (% points), response time of the wood (hours), hysteresis |
-| Region and language | Timezone, default language |
-| Data | Data retention (days, 0 = forever), debug logging |
-| Server | Listen address and port (*restart required*) |
-| Security | Protection level, automatic log-out time, admin password |
+|Section|Settings|
+|-|-|
+|Display|Dashboard view (Board / Meters), theme (Dark / Light), show or hide comfort, the Mollier diagram and wood moisture|
+|Modbus buses and sensors|Poll interval, buses (RS-485 interfaces), sensors (Modbus slaves) with data type (int16, uint16, int32, uint32, float32), byte order (ABCD, DCBA, BADC, CDAB) and a temperature and humidity correction for calibration|
+|Notifications: channels|Telegram bot token and chat ID, SMTP server, sender and recipients, test buttons|
+|MQTT|Broker, port, TLS, login, client ID, topic prefix, publish interval, QoS, retain, Home Assistant discovery, test button|
+|Reports|Report by e-mail (off / weekly / monthly), report language, download|
+|Notifications: limits|Limits per quantity (all sensors or one sensor) at warning or alarm level, zones (desired or danger zone, colour, per sensor), alarm delay, hysteresis, recovery and offline alerts|
+|Wood moisture|Correction for the wood species (% points), response time of the wood (hours), hysteresis|
+|Region and language|Timezone, default language|
+|Data|Data retention (days, 0 = forever), debug logging|
+|Server|Listen address and port (*restart required*)|
+|Security|Protection level, automatic log-out time, admin password|
 
 **Protection level**
-- *Protect settings only* (default): the dashboard is public, the Settings tab needs the password.
-- *Protect the whole app*: every page, including the dashboard and its data, needs the password.
+
+* *Protect settings only* (default): the dashboard is public, the Settings tab needs the password.
+* *Protect the whole app*: every page, including the dashboard and its data, needs the password.
 
 Settings are stored in the database. On the first start of this version, values from `.env`
-(`DATA_RETENTION_DAYS`, `DEBUG_LOGGING`, `TIMEZONE`, `DEFAULT_LANGUAGE`) are taken over
+(`DATA\_RETENTION\_DAYS`, `DEBUG\_LOGGING`, `TIMEZONE`, `DEFAULT\_LANGUAGE`) are taken over
 automatically; after that the Settings tab is leading. If the configured address/port cannot be
 used at startup, the app falls back to `0.0.0.0:8050` so the device stays reachable.
 
 **Forgot the admin password?** Run on the device:
+
 ```bash
 python settings.py reset-password
 ```
+
 Then open the Settings tab and set a new password straight away.
 
 > The app uses HTTP. On untrusted networks, put it behind a VPN or an HTTPS reverse proxy.
@@ -393,13 +418,13 @@ Then open the Settings tab and set a new password straight away.
 
 In **Settings → Modbus buses and sensors**:
 
-- **Buses**: one row per RS-485 interface (USB dongle), with port, baud rate, data bits, parity,
-  stop bits and timeout. Ports found on the device are listed below the table. Tip for Linux:
-  use the stable `/dev/serial/by-id/...` name, so ports do not swap after a reboot.
-- **Sensors**: one row per Modbus slave: name, bus, slave ID (unique per bus), function code,
-  temperature and humidity register and scale. XY-MD02: function code 4, registers 1 and 2,
-  scale 0.1. Each sensor gets a fixed ID (`#1`, `#2`, ...) that stays the same when renamed.
-- **Live status** shows the last values or the last error per sensor.
+* **Buses**: one row per RS-485 interface (USB dongle), with port, baud rate, data bits, parity,
+stop bits and timeout. Ports found on the device are listed below the table. Tip for Linux:
+use the stable `/dev/serial/by-id/...` name, so ports do not swap after a reboot.
+* **Sensors**: one row per Modbus slave: name, bus, slave ID (unique per bus), function code,
+temperature and humidity register and scale. XY-MD02: function code 4, registers 1 and 2,
+scale 0.1. Each sensor gets a fixed ID (`#1`, `#2`, ...) that stays the same when renamed.
+* **Live status** shows the last values or the last error per sensor.
 
 Buses are read in parallel; sensors on one bus one after another. A sensor that does not answer
 or an unplugged interface does not affect the others and is retried automatically. Changes are
@@ -412,27 +437,29 @@ its detailed view and historical replay.
 #### Notifications
 
 1. **Channels** (Settings → Notifications: channels)
-   - *Telegram*: create a bot with [@BotFather](https://t.me/BotFather) and copy the token.
-     Send your bot a message and fill in your chat ID (e.g. from [@userinfobot](https://t.me/userinfobot)),
-     or a group/channel ID.
-   - *E-mail*: SMTP server, port, security (STARTTLS 587 / SSL 465), username/password, sender and
-     one or more recipients (comma separated).
-   - Use **Test Telegram** / **Test e-mail** to check the settings before saving.
-   - Token and password are never shown again; leave the field empty to keep the stored value.
+
+   * *Telegram*: create a bot with [@BotFather](https://t.me/BotFather) and copy the token.
+Send your bot a message and fill in your chat ID (e.g. from [@userinfobot](https://t.me/userinfobot)),
+or a group/channel ID.
+   * *E-mail*: SMTP server, port, security (STARTTLS 587 / SSL 465), username/password, sender and
+one or more recipients (comma separated).
+   * Use **Test Telegram** / **Test e-mail** to check the settings before saving.
+   * Token and password are never shown again; leave the field empty to keep the stored value.
 2. **Limits** (Settings → Notifications: limits)
-   - Add a limit per quantity (temperature, humidity, dew point, absolute humidity, wood moisture)
-     with a minimum and/or maximum and a level (*Warning* or *Alarm*), for *All sensors* or for one
-     sensor. A rule for one sensor replaces the rule for all sensors for that quantity and level.
-   - *Zones*: an area of temperature × humidity with a colour, shaped in the wood diagram.
-     *Desired zone* notifies when a sensor leaves it, *danger zone* when a sensor enters it,
-     *display only* just draws it. Settings lists the zones to change their other properties.
-   - *Alarm delay*: how long a limit must be exceeded before an alert is sent (no alerts for spikes).
-   - *Hysteresis*: how far back inside the limit (or away from a zone edge) a value must be before it
-     counts as normal again, so a value hovering around the limit does not cause a stream of messages.
-   - Saving the settings keeps alarms that are already active, as long as their limit did not change.
-   - *Notify when back to normal* and *Offline alert after N minutes* (0 = off).
-   - The last 20 notifications and their delivery status are listed below the limits. Failed
-     messages are retried automatically (up to every hour).
+
+   * Add a limit per quantity (temperature, humidity, dew point, absolute humidity, wood moisture)
+with a minimum and/or maximum and a level (*Warning* or *Alarm*), for *All sensors* or for one
+sensor. A rule for one sensor replaces the rule for all sensors for that quantity and level.
+   * *Zones*: an area of temperature × humidity with a colour, shaped in the wood diagram.
+*Desired zone* notifies when a sensor leaves it, *danger zone* when a sensor enters it,
+*display only* just draws it. Settings lists the zones to change their other properties.
+   * *Alarm delay*: how long a limit must be exceeded before an alert is sent (no alerts for spikes).
+   * *Hysteresis*: how far back inside the limit (or away from a zone edge) a value must be before it
+counts as normal again, so a value hovering around the limit does not cause a stream of messages.
+   * Saving the settings keeps alarms that are already active, as long as their limit did not change.
+   * *Notify when back to normal* and *Offline alert after N minutes* (0 = off).
+   * The last 20 notifications and their delivery status are listed below the limits. Failed
+messages are retried automatically (up to every hour).
 
 #### MQTT
 
@@ -440,14 +467,14 @@ Enable *Publish values to an MQTT broker* in Settings → MQTT and enter the bro
 optionally TLS, username/password, client ID). **Test connection** checks the settings before
 saving. With topic prefix `xy-md02` every sensor publishes, at most once per publish interval:
 
-| Topic | Payload |
-|-------|---------|
-| `xy-md02/status` | `online` / `offline` (retained, `offline` via last will) |
-| `xy-md02/<sensor>/state` | `{"device_id": 3, "name": "Kas noord", "temperature": 18.7, "humidity": 62.0, "dewpoint": 11.1, "absolute_humidity": 9.92, "timestamp": "2026-10-14T12:15:43+02:00"}` |
-| `xy-md02/<sensor>/temperature` (and `humidity`, `dewpoint`, `absolute_humidity`, `wood_emc` when wood moisture is on) | plain value, e.g. `18.7` |
+|Topic|Payload|
+|-|-|
+|`xy-md02/status`|`online` / `offline` (retained, `offline` via last will)|
+|`xy-md02/<sensor>/state`|`{"device\_id": 3, "name": "Kas noord", "temperature": 18.7, "humidity": 62.0, "dewpoint": 11.1, "absolute\_humidity": 9.92, "timestamp": "2026-10-14T12:15:43+02:00"}`|
+|`xy-md02/<sensor>/temperature` (and `humidity`, `dewpoint`, `absolute\_humidity`, `wood\_emc` when wood moisture is on)|plain value, e.g. `18.7`|
 
 `<sensor>` is the sensor name in lower case with `-` instead of spaces (`Kas noord` → `kas-noord`);
-renaming a sensor changes its topic, `device_id` stays the same. If the broker is unreachable,
+renaming a sensor changes its topic, `device\_id` stays the same. If the broker is unreachable,
 measuring continues and the app reconnects automatically; the connection status is shown in Settings.
 
 **Home Assistant discovery**: enable *Home Assistant discovery* in Settings → MQTT and every sensor
@@ -461,9 +488,9 @@ or turning discovery off removes them from Home Assistant.
 
 Settings → Reports makes a PDF report of all sensors in one document:
 
-- the wood moisture per sensor per day (daily average) in a chart;
-- a table with the minimum and maximum temperature, humidity and wood moisture per sensor. Wood moisture
-  above 16 % is yellow, above 18 % orange and above 20 % red.
+* the wood moisture per sensor per day (daily average) in a chart;
+* a table with the minimum and maximum temperature, humidity and wood moisture per sensor. Wood moisture
+above 16 % is yellow, above 18 % orange and above 20 % red.
 
 The wood moisture uses the same correction and response time as the board and the alarms, calculated
 from hourly averages.
@@ -479,34 +506,34 @@ language of the report. *Download report* gives the PDF of this or last week or 
 When upgrading, the existing `.env` Modbus configuration becomes *Bus 1* with *Sensor 1*, and all
 existing measurements belong to *Sensor 1*.
 
-- `MODBUS_PORT`: Serial port (e.g. COM11, /dev/ttyUSB0)
-- `MODBUS_SLAVE_ID`: Slave ID of the device
-- `MODBUS_BAUDRATE`: Baudrate (9600, 19200, etc.)
-- `MODBUS_BYTESIZE`: Number of data bits (8)
-- `MODBUS_PARITY`: Parity bit (N = None, E = Even, O = Odd)
-- `MODBUS_STOPBITS`: Stop bits (1, 2)
-- `MODBUS_TIMEOUT`: Timeout in seconds
-- `MODBUS_FUNCTION_CODE`: Modbus function code (4 = Read Input Registers)
-- `MODBUS_REGISTER_TEMP`: Register number for temperature
-- `MODBUS_REGISTER_HUMIDITY`: Register number for humidity
+* `MODBUS\_PORT`: Serial port (e.g. COM11, /dev/ttyUSB0)
+* `MODBUS\_SLAVE\_ID`: Slave ID of the device
+* `MODBUS\_BAUDRATE`: Baudrate (9600, 19200, etc.)
+* `MODBUS\_BYTESIZE`: Number of data bits (8)
+* `MODBUS\_PARITY`: Parity bit (N = None, E = Even, O = Odd)
+* `MODBUS\_STOPBITS`: Stop bits (1, 2)
+* `MODBUS\_TIMEOUT`: Timeout in seconds
+* `MODBUS\_FUNCTION\_CODE`: Modbus function code (4 = Read Input Registers)
+* `MODBUS\_REGISTER\_TEMP`: Register number for temperature
+* `MODBUS\_REGISTER\_HUMIDITY`: Register number for humidity
 
 #### Database Settings
 
-- `DATABASE_FILE`: Path to the SQLite database file (stays in `.env`, it is needed before settings can be read)
+* `DATABASE\_FILE`: Path to the SQLite database file (stays in `.env`, it is needed before settings can be read)
 
 #### Initial values for the Settings tab
 
-Only read once, when the setting has never been saved: `DATA_RETENTION_DAYS`, `DEBUG_LOGGING`,
-`TIMEZONE`, `DEFAULT_LANGUAGE`. Listen address and port are set in the Settings tab only
+Only read once, when the setting has never been saved: `DATA\_RETENTION\_DAYS`, `DEBUG\_LOGGING`,
+`TIMEZONE`, `DEFAULT\_LANGUAGE`. Listen address and port are set in the Settings tab only
 (default `0.0.0.0:8050`).
 
 ### Adding a New Language
 
 1. Open `translations.py`
+2. Add the language to `LANGUAGE\_NAMES`:
 
-2. Add the language to `LANGUAGE_NAMES`:
 ```python
-LANGUAGE_NAMES = {
+LANGUAGE\_NAMES = {
     'nl': 'NL',
     'en': 'EN',
     'de': 'DE',
@@ -517,6 +544,7 @@ LANGUAGE_NAMES = {
 ```
 
 3. Add the translations to `TRANSLATIONS`:
+
 ```python
 TRANSLATIONS = {
     'nl': { ... },
@@ -531,43 +559,46 @@ TRANSLATIONS = {
 ```
 
 The dropdown will be updated automatically. Every key must exist in every language with the same
-`{placeholders}`; `python test_app.py` and the *Translation Validator* workflow check this.
+`{placeholders}`; `python test\_app.py` and the *Translation Validator* workflow check this.
 
-### Comfort Score & Humidex
+### Comfort Score \& Humidex
 
 The application uses the **Humidex** (Humidity Index) for scientific comfort calculation according to Environment Canada standard.
 
 #### Humidex Formula
+
 ```
 Humidex = T + 0.5555 × (e - 10)
 ```
+
 where:
-- T = temperature in °C
-- e = vapor pressure saturation in hPa (calculated via dew point)
+
+* T = temperature in °C
+* e = vapor pressure saturation in hPa (calculated via dew point)
 
 #### Comfort classification based on Humidex:
 
-- **< 20**: Too cold - Score 0
-- **20-27**: Comfortably cool - Score 4
-- **27-30**: Comfortable - Score 5
-- **30-35**: Optimally comfortable - Score 6
-- **35-40**: Some discomfort - Score 3
-- **40-46**: Great discomfort, avoid physical exertion - Score 2
-- **46-54**: Dangerous, heat cramps possible - Score 1
-- **> 54**: Heat stroke imminent - Score 0
+* **< 20**: Too cold - Score 0
+* **20-27**: Comfortably cool - Score 4
+* **27-30**: Comfortable - Score 5
+* **30-35**: Optimally comfortable - Score 6
+* **35-40**: Some discomfort - Score 3
+* **40-46**: Great discomfort, avoid physical exertion - Score 2
+* **46-54**: Dangerous, heat cramps possible - Score 1
+* **> 54**: Heat stroke imminent - Score 0
 
 ### Mollier Diagram (Psychrometric Chart)
 
 The application displays an interactive **psychrometric chart** with:
 
-- **Saturation line**: 100% relative humidity curve
-- **RH lines**: 10%, 20%, ..., 90% relative humidity
-- **Comfort zone**: Marked area (20-26°C, 30-60% RH)
-- **Live indicators**: Current condition of every sensor as a star in the sensor's colour
-- **Historical marker**: The replayed moment when using historical replay
-- **Below 0 °C**: The temperature axis extends automatically so cold rooms stay visible
-- **Humidity ratio**: Y-axis shows absolute humidity in g water / kg dry air
-- **Zoom & Pan**: Full Plotly interactivity for detailed analysis
+* **Saturation line**: 100% relative humidity curve
+* **RH lines**: 10%, 20%, ..., 90% relative humidity
+* **Comfort zone**: Marked area (20-26°C, 30-60% RH)
+* **Live indicators**: Current condition of every sensor as a star in the sensor's colour
+* **Historical marker**: The replayed moment when using historical replay
+* **Below 0 °C**: The temperature axis extends automatically so cold rooms stay visible
+* **Humidity ratio**: Y-axis shows absolute humidity in g water / kg dry air
+* **Zoom \& Pan**: Full Plotly interactivity for detailed analysis
 
 This diagram helps to see at a glance whether the climate condition is within the comfort zone and how it relates to saturation limits.
 
@@ -578,16 +609,16 @@ The app then calculates the **equilibrium moisture content** (EMC): the moisture
 at the measured temperature and humidity, with the Hailwood-Horrobin formula from the USDA Wood Handbook
 (20 °C and 65 % RH gives 12 %).
 
-- **Board, meters and chart**: a *Wood moisture* value per sensor
-- **Diagram**: temperature × humidity with lines of equal wood moisture, the sensors as points and the
-  wood moisture limits from your alarm rules as coloured zones (yellow = warning, red = alarm)
-- **Alarms**: add rules for *Wood moisture*, e.g. a warning at a maximum of 18 % and an alarm at 20 %
-- **Response time** (default 24 h): wood follows the air slowly, so the board and the alarms use an average
-  over this time. An open door or a short peak does not trigger an alarm. After a restart the average is
-  taken from the database. Set it to 0 to use the live value.
-- **Correction**: the formula applies to average wood; according to the handbook the difference between
-  species is small. Tropical or thermally modified wood takes up less moisture: enter a negative correction,
-  or calibrate against a wood moisture meter.
+* **Board, meters and chart**: a *Wood moisture* value per sensor
+* **Diagram**: temperature × humidity with lines of equal wood moisture, the sensors as points and the
+wood moisture limits from your alarm rules as coloured zones (yellow = warning, red = alarm)
+* **Alarms**: add rules for *Wood moisture*, e.g. a warning at a maximum of 18 % and an alarm at 20 %
+* **Response time** (default 24 h): wood follows the air slowly, so the board and the alarms use an average
+over this time. An open door or a short peak does not trigger an alarm. After a restart the average is
+taken from the database. Set it to 0 to use the live value.
+* **Correction**: the formula applies to average wood; according to the handbook the difference between
+species is small. Tropical or thermally modified wood takes up less moisture: enter a negative correction,
+or calibrate against a wood moisture meter.
 
 18 % wood moisture is about 85 % RH and 20 % about 89 % RH, so a few % RH sensor error matters here.
 Use the humidity correction per sensor (Settings > Modbus) to calibrate the sensors.
@@ -597,36 +628,40 @@ Use the humidity correction per sensor (Settings > Modbus) to calibrate the sens
 The application offers advanced historical data analysis with two input methods:
 
 #### **Preset Buttons** (Quick selection)
-- **5 min** - Last 5 minutes
-- **10 min** - Last 10 minutes
-- **30 min** - Last 30 minutes
-- **1 hour** - Last hour
-- **2 hours** - Last 2 hours
-- **6 hours** - Last 6 hours
-- **12 hours** - Last 12 hours
-- **24 hours** - Last day
-- **2 days** - Last 2 days
-- **Week** - Last week
-- **Month** - Last month
+
+* **5 min** - Last 5 minutes
+* **10 min** - Last 10 minutes
+* **30 min** - Last 30 minutes
+* **1 hour** - Last hour
+* **2 hours** - Last 2 hours
+* **6 hours** - Last 6 hours
+* **12 hours** - Last 12 hours
+* **24 hours** - Last day
+* **2 days** - Last 2 days
+* **Week** - Last week
+* **Month** - Last month
 
 Historical replay works for one sensor: select it in the chart first.
 
 #### **Custom Range** (Precision selection)
-- Click **"Choose range for historical analysis"** to open the dialog
-- Choose start date and time (hour:minute)
-- Choose end date and time (hour:minute)
-- Supports same day selection for start and end
-- Hour selection: 0-23
-- Minute selection: 0-59
+
+* Click **"Choose range for historical analysis"** to open the dialog
+* Choose start date and time (hour:minute)
+* Choose end date and time (hour:minute)
+* Supports same day selection for start and end
+* Hour selection: 0-23
+* Minute selection: 0-59
 
 #### **Timeline Slider**
-- After selecting a period, an **interactive slider** appears
-- Drag the slider to "travel" back through time
-- **Live updates while dragging**: Chart updates immediately without releasing mouse
-- The **psychrometric chart** shows the climate condition position at that moment
-- Timestamp is displayed live in DD-MM HH:MM format
+
+* After selecting a period, an **interactive slider** appears
+* Drag the slider to "travel" back through time
+* **Live updates while dragging**: Chart updates immediately without releasing mouse
+* The **psychrometric chart** shows the climate condition position at that moment
+* Timestamp is displayed live in DD-MM HH:MM format
 
 **Usage:**
+
 1. Select one sensor in the chart, then click **"Choose range for historical analysis"**
 2. Click a preset button, or enter a specific start and end date/time
 3. Use the slider to navigate through historical data
@@ -639,46 +674,50 @@ Historical replay works for one sensor: select it in the chart first.
 The application uses advanced SQLite optimizations for multi-year continuous operation:
 
 **Table-per-day Partitioning:**
-- Dynamic table creation: `measurements_YYYYMMDD` (e.g. `measurements_20251205`)
-- Automatic table switching at midnight
-- UNION ALL queries across relevant day-tables
-- Smart table selection based on timerange
-- Instant cleanup via DROP TABLE (milliseconds vs minutes for DELETE+VACUUM)
+
+* Dynamic table creation: `measurements\_YYYYMMDD` (e.g. `measurements\_20251205`)
+* Automatic table switching at midnight
+* UNION ALL queries across relevant day-tables
+* Smart table selection based on timerange
+* Instant cleanup via DROP TABLE (milliseconds vs minutes for DELETE+VACUUM)
 
 **Write Optimizations:**
-- WAL mode (Write-Ahead Logging) for better concurrent performance
-- PRAGMA synchronous=NORMAL for faster commits
-- PRAGMA temp_store=MEMORY for temporary data in RAM
-- Batch inserts: 30-measurement buffer (30 seconds)
-- One writer thread for all buses with a persistent connection
-- 97% reduction in write transactions (86k/day → 2.9k/day)
+
+* WAL mode (Write-Ahead Logging) for better concurrent performance
+* PRAGMA synchronous=NORMAL for faster commits
+* PRAGMA temp\_store=MEMORY for temporary data in RAM
+* Batch inserts: 30-measurement buffer (30 seconds)
+* One writer thread for all buses with a persistent connection
+* 97% reduction in write transactions (86k/day → 2.9k/day)
 
 **Storage Optimizations:**
-- Integer epoch timestamps instead of TEXT datetime (50% space saving)
-- Indexed timestamp columns per table
-- Configurable data retention with automatic cleanup
+
+* Integer epoch timestamps instead of TEXT datetime (50% space saving)
+* Indexed timestamp columns per table
+* Configurable data retention with automatic cleanup
 
 **Performance Benefits:**
-- Queries only scan relevant days (not entire database)
-- 10-100× faster batch inserts vs per-second commits
-- No table bloat over time due to partitioning
-- Sub-millisecond table drops for old data
-- Linear performance independent of dataset size
+
+* Queries only scan relevant days (not entire database)
+* 10-100× faster batch inserts vs per-second commits
+* No table bloat over time due to partitioning
+* Sub-millisecond table drops for old data
+* Linear performance independent of dataset size
 
 #### Database Schema (per table)
 
 ```sql
-CREATE TABLE measurements_YYYYMMDD (
+CREATE TABLE measurements\_YYYYMMDD (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     timestamp INTEGER NOT NULL,  -- Unix epoch timestamp
     temperature REAL NOT NULL,
     humidity REAL NOT NULL,
     dewpoint REAL,
-    absolute_humidity REAL,
-    device_id INTEGER NOT NULL DEFAULT 1  -- sensor id (see Settings)
+    absolute\_humidity REAL,
+    device\_id INTEGER NOT NULL DEFAULT 1  -- sensor id (see Settings)
 );
-CREATE INDEX idx_measurements_YYYYMMDD_timestamp ON measurements_YYYYMMDD(timestamp);
-CREATE INDEX idx_measurements_YYYYMMDD_device ON measurements_YYYYMMDD(device_id, timestamp);
+CREATE INDEX idx\_measurements\_YYYYMMDD\_timestamp ON measurements\_YYYYMMDD(timestamp);
+CREATE INDEX idx\_measurements\_YYYYMMDD\_device ON measurements\_YYYYMMDD(device\_id, timestamp);
 ```
 
 ### Testing
@@ -686,70 +725,77 @@ CREATE INDEX idx_measurements_YYYYMMDD_device ON measurements_YYYYMMDD(device_id
 The application includes an automated test suite:
 
 ```bash
-python test_app.py
+python test\_app.py
 ```
 
 **Test coverage** (84 tests, also run by the *CI Testing* workflow on every pull request):
-- Settings: migration from `.env`, validation, all-or-nothing saving, write-only secrets
-- Login: password rules, sessions, throttling, protection levels, redirects
-- Buses and sensors: validation, upgrade of existing data, data types and byte order, calibration, scanning, failure isolation
-- Notifications: limits and levels, zones, alarm delay, hysteresis, recovery, muting, offline alerts, retries
-- Wood moisture: formula against the Wood Handbook, response time, restart after settings change
-- Dashboard: form fields, zone editor, limits in the chart, theme toggle, alarm window, phone layout
-- MQTT: topics, payloads, reconnect behaviour
-- Translations: same placeholders in every language, no untranslated text in the layout
+
+* Settings: migration from `.env`, validation, all-or-nothing saving, write-only secrets
+* Login: password rules, sessions, throttling, protection levels, redirects
+* Buses and sensors: validation, upgrade of existing data, data types and byte order, calibration, scanning, failure isolation
+* Notifications: limits and levels, zones, alarm delay, hysteresis, recovery, muting, offline alerts, retries
+* Wood moisture: formula against the Wood Handbook, response time, restart after settings change
+* Dashboard: form fields, zone editor, limits in the chart, theme toggle, alarm window, phone layout
+* MQTT: topics, payloads, reconnect behaviour
+* Translations: same placeholders in every language, no untranslated text in the layout
 
 ### Development
 
 #### Generating requirements.txt
+
 ```bash
 pip freeze > requirements.txt
 ```
 
 #### Code Structure
 
-- **app.py**: entry point, starts the Modbus reader, notifications, MQTT and the web server
-- **layout.py**: page structure, theme tokens (dark/light) and styling
-- **callbacks.py**: dashboard (board/meters, chart, status, Mollier and wood diagram, zone editor, alarm window, theme)
-- **settings_ui.py**: Settings tab
-- **settings.py** / **devices.py**: settings, buses and sensors stored in the database
-- **modbus_reader.py**: one thread per RS-485 bus, batched database writes
-- **alerts.py**: limits, alarm state, Telegram and e-mail notifications
-- **mqtt_publisher.py**: MQTT publishing
-- **auth.py**: admin password, login sessions, protection
-- **database.py**: table-per-day storage, queries, cleanup
-- **psychrometric.py**: Mollier diagram
-- **wood.py**: wood equilibrium moisture
-- **zones.py**: zones, point-in-zone check
-- **report.py**: PDF report and its e-mail schedule
-- **translations.py**: texts in NL, EN, DE, FR, ES
-- **test_app.py**: automated tests
+* **app.py**: entry point, starts the Modbus reader, notifications, MQTT and the web server
+* **layout.py**: page structure, theme tokens (dark/light) and styling
+* **callbacks.py**: dashboard (board/meters, chart, status, Mollier and wood diagram, zone editor, alarm window, theme)
+* **settings\_ui.py**: Settings tab
+* **settings.py** / **devices.py**: settings, buses and sensors stored in the database
+* **modbus\_reader.py**: one thread per RS-485 bus, batched database writes
+* **alerts.py**: limits, alarm state, Telegram and e-mail notifications
+* **mqtt\_publisher.py**: MQTT publishing
+* **auth.py**: admin password, login sessions, protection
+* **database.py**: table-per-day storage, queries, cleanup
+* **psychrometric.py**: Mollier diagram
+* **wood.py**: wood equilibrium moisture
+* **zones.py**: zones, point-in-zone check
+* **report.py**: PDF report and its e-mail schedule
+* **translations.py**: texts in NL, EN, DE, FR, ES
+* **test\_app.py**: automated tests
 
 ### Troubleshooting
 
 #### Modbus connection problems
-- Check the live status per sensor in Settings → Modbus buses and sensors
-- Check if the serial port is correct and listed under the bus table
-- Verify the baudrate and other serial settings
-- Check the register numbers in the device documentation
+
+* Check the live status per sensor in Settings → Modbus buses and sensors
+* Check if the serial port is correct and listed under the bus table
+* Verify the baudrate and other serial settings
+* Check the register numbers in the device documentation
 
 #### Database errors
-- Ensure the `src/` folder exists
-- Check write permissions in the project folder
+
+* Ensure the `src/` folder exists
+* Check write permissions in the project folder
 
 #### `TypeError: ... unexpected keyword argument` after updating
+
 The code was updated but the Python packages were not. Activate the virtual environment and run
 `pip install -r requirements.txt` (or run the service install script again), then start the app.
 
 #### Port already in use
-- Change the port in the Settings tab (Server section) and restart the app
+
+* Change the port in the Settings tab (Server section) and restart the app
 
 ### License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-Third-party packages are installed by pip under their own licenses; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Third-party packages are installed by pip under their own licenses; see [THIRD\_PARTY\_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Modbus® is a registered trademark of Schneider Electric, licensed to the Modbus Organization. ClimateMonitor is an independent project, not affiliated with or endorsed by the Modbus Organization or Schneider Electric.
 
 The software is provided as is, without any warranty (see [LICENSE](LICENSE)). Use it at your own risk; to the extent permitted by law, BRDC is not liable for any damage caused by its use.
+
