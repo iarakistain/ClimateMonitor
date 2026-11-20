@@ -1,4 +1,4 @@
-# Climate Monitor
+# Egur Monitor
 
 A real-time climate monitoring dashboard for Modbus RTU temperature and humidity sensors (XY-MD02, XY-MD04 and similar) that reads, visualizes and analyzes their data.
 
