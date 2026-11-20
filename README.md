@@ -1,15 +1,5 @@
 # Climate Monitor
 
-[!\[CI Testing](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/ci-testing.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/ci-testing.yml)
-[!\[Code Quality](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/code-quality.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/code-quality.yml)
-[!\[Translation Validator](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/translation-validator.yml/badge.svg)](https://github.com/CervezaStallone/ClimateMonitor/actions/workflows/translation-validator.yml)
-[!\[Release](https://img.shields.io/github/v/release/CervezaStallone/ClimateMonitor)](https://github.com/CervezaStallone/ClimateMonitor/releases/latest)
-[!\[Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-blue?logo=python\&logoColor=white)](https://www.python.org/)
-[!\[Dash](https://img.shields.io/badge/Dash-4.4-008de4?logo=plotly\&logoColor=white)](https://dash.plotly.com/)
-[!\[Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows%20%7C%20Raspberry%20Pi-lightgrey)](#run-as-a-service-start-at-boot-also-without-login)
-[!\[License: MIT](https://img.shields.io/github/license/CervezaStallone/ClimateMonitor)](LICENSE)
-[!\[Last commit](https://img.shields.io/github/last-commit/CervezaStallone/ClimateMonitor)](https://github.com/CervezaStallone/ClimateMonitor/commits/main)
-
 A real-time climate monitoring dashboard for Modbus RTU temperature and humidity sensors (XY-MD02, XY-MD04 and similar) that reads, visualizes and analyzes their data.
 
 <p>
