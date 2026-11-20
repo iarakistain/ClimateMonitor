@@ -80,7 +80,7 @@ A real-time climate monitoring dashboard for Modbus RTU temperature and humidity
 
 #### Dashboard: Board view (dark theme)
 
-!\[Board view](img/dashboard-board-dark.png)
+![Board view](img/dashboard-board-dark.png)
 *All sensors at a glance: current values, 24-hour trend and status per sensor. Below: one chart with a tab per quantity.*
 
 #### Dashboard: Meters view (light theme)
