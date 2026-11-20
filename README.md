@@ -85,7 +85,7 @@ A real-time climate monitoring dashboard for Modbus RTU temperature and humidity
 
 #### Dashboard: Meters view (light theme)
 
-!\[Meters view](img/dashboard-meters-light.png)
+![Meters view](img/dashboard-meters-light.png)
 *One panel per sensor. View and theme are chosen in Settings; the switch at the top changes the view temporarily.*
 
 #### On a phone
@@ -97,34 +97,34 @@ A real-time climate monitoring dashboard for Modbus RTU temperature and humidity
 
 #### Mollier diagram
 
-!\[Mollier diagram](img/mollier.png)
+![Mollier diagram](img/mollier.png)
 *Current state of every sensor in its own colour, with saturation line, RH curves and comfort zone.*
 
 #### Wood moisture
 
-!\[Wood moisture diagram](img/wood-diagram.png)
+![Wood moisture diagram](img/wood-diagram.png)
 *Equilibrium wood moisture: lines of equal wood moisture, the 18 % warning and 20 % alarm limits and your zones (here a desired comfort zone and a mould-risk danger zone).*
 
-!\[Zone editor](img/zone-editor.png)
+![Zone editor](img/zone-editor.png)
 *Zone editor: drag the corners, drag a dot in the middle of a side to add a corner.*
 
 #### Report
 
-!\[Moisture report](img/report.png)
+![Moisture report](img/report.png)
 *Monthly report (Spanish, example data): daily wood moisture per sensor and the min/max table with the wood moisture coloured by level.*
 
 #### Historical replay
 
-!\[Historical range](img/history-range.png)
-!\[Historical replay](img/mollier-history.png)
+![Historical range](img/history-range.png)
+![Historical replay](img/mollier-history.png)
 *Pick a period for one sensor and drag the timeline to replay its climate in the Mollier diagram.*
 
 #### Settings
 
-!\[Settings: display and Modbus](img/settings-modbus.png)
+![Settings: display and Modbus](img/settings-modbus.png)
 *Display, Modbus buses and sensors with live status.*
 
-!\[Settings: limits](img/settings-limits.png)
+![Settings: limits](img/settings-limits.png)
 *Alarm limits for all sensors or per sensor, alarm delay, hysteresis and the notification log.*
 
 *Screenshots use demonstration data.*
